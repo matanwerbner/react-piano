@@ -1,10 +1,11 @@
 'use strict';
 
 import 'styles/main.scss';
+import  'bootstrap/less/bootstrap.less';
 
 import React from 'react';
 import { render } from 'react-dom';
 
-import Index from 'components/Index/Index';
+import App from 'components/App';
 
-render(<Index items={[1,2,3]} />, document.getElementById('js-main'));
+render(<App />, document.getElementById('js-main'));

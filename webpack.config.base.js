@@ -50,7 +50,9 @@ module.exports = {
 
   module: {
     loaders: [
-      {test: /\.scss$/, loader: 'style!css!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'}
+      { test: /\.less/, loader: 'style!css!less' },
+      { test: /\.(woff2|woff|ttf|svg|eot)$/, loader: 'file' },
+      { test: /\.scss$/, loader: 'style!css!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded' }
     ],
 
     noParse: /\.min\.js/

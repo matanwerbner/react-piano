@@ -1,6 +1,48 @@
-$background: lightblue;
+$black: black;
+$grey: slategrey;
+$borderDefault: 1px solid $black;
+$displayDefualt: inline-block;
 
-body {
-  background: $background;
-  font-family: "Helvetica Neue", serif;
+@mixin flatTranslation {
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+}
+
+.piano-body {
+  width: 100%;
+  height: 100px;
+}
+
+.piano-keys-container {
+  border-top: $borderDefault;
+  border-left: $borderDefault;
+  border-bottom: $borderDefault;
+}
+
+.piano-octave {
+  display: inline;
+}
+
+.white-key {
+  background-color: white;
+  height: 100px;
+  width: 1.923%;
+  display: $displayDefualt;
+  border-right: $borderDefault;
+  position: relative;
+}
+
+.active {
+  background-color: $grey !important;
+}
+
+.black-key {
+  @include flatTranslation;
+
+  background-color: $black;
+  height: 50px;
+  width: 1.2%;
+  display: $displayDefualt;
+  position: absolute;
+  z-index: 1;
 }
